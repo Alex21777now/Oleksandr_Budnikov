@@ -9,14 +9,14 @@ export default class ChooseFreshIdeas_1 extends Component {
   render() {
     return (
       <>
-      Choose fresh ideas to do
+      <h4>Choose fresh ideas to do</h4>
       <div>
       <>
 {[
-  'Primary',
+
   'Secondary',
   'Success',
-  'Danger',
+
   'Warning',
   'Info',
   'Light',
@@ -39,8 +39,9 @@ export default class ChooseFreshIdeas_1 extends Component {
     </Card.Body>
   </Card>
 ))}
-</>
+     </>
       </div>
+
      </>
     );
   }
