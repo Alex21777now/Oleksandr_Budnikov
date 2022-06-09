@@ -22,6 +22,7 @@ export default class IdeasInMyList_SLIDE_2 extends Component {
       <h4>Ideas in my list</h4>
       <div>
       ( click on it to fulfill )
+      <p>&nbsp;</p>
 
       <Swiper
             // install Swiper modules
@@ -31,7 +32,7 @@ export default class IdeasInMyList_SLIDE_2 extends Component {
             autoplay={{ delay: 5000 }}
             navigation
             pagination={{ clickable: true }}
-            scrollbar={{ draggable: true }}
+      //      scrollbar={{ draggable: true }}
             onSwiper={(swiper) => console.log(swiper)}
             onSlideChange={() => console.log('slide change')}
 
@@ -79,7 +80,8 @@ export default class IdeasInMyList_SLIDE_2 extends Component {
           <div>&nbsp;</div>
 
           </Swiper>
-
+            <p>&nbsp;</p>
+      <p>--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</p>
       </div>
       </>
     );

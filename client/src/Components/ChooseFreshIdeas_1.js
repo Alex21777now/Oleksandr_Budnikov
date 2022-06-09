@@ -10,6 +10,7 @@ export default class ChooseFreshIdeas_1 extends Component {
     return (
       <>
       <h4>Choose fresh ideas to do</h4>
+      <p>&nbsp;</p>
       <div>
       <>
 {[
@@ -40,6 +41,8 @@ export default class ChooseFreshIdeas_1 extends Component {
   </Card>
 ))}
      </>
+       <p>&nbsp;</p>
+     <p>--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</p>
       </div>
 
      </>
