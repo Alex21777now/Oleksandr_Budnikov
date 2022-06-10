@@ -51,16 +51,32 @@ export default class Achievements_3 extends Component {
       <div>
 
         <Styles>
+          <div style={{ display: 'inline-block', margin: '5%' }}>
             <div className="sphere">1</div>
-            <div style={{ display: 'inline-block' }}>Recreational</div>
+            <div style={{ margin: '10%' }}>&nbsp;&nbsp;&nbsp;&nbsp; Recreational</div>
+          </div>
+          <div style={{ display: 'inline-block', margin: '5%' }}>
             <div className="sphere green">3</div>
-            <div style={{ display: 'inline-block' }}>Social</div>
+            <div style={{ margin: '10%' }}>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Social</div>
+          </div>
+          <div style={{ display: 'inline-block', margin: '5%' }}>
             <div className="sphere yellow">5</div>
+            <div style={{ margin: '10%' }}>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Education</div>
+          </div>
+          <div style={{ display: 'inline-block', margin: '5%' }}>
+            <div className="sphere blue">3</div>
+            <div style={{ margin: '10%' }}>&nbsp;&nbsp;&nbsp;&nbsp; Sport</div>
+          </div>
+          <div style={{ display: 'inline-block', margin: '5%' }}>
+            <div className="sphere gray">11</div>
+            <div style={{ margin: '10%' }}>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Relaxation</div>
+          </div>
+          {/* <div className="sphere yellow">5</div>
             <div style={{ display: 'inline-block' }}>Education</div>
             <div className="sphere blue">3</div>
             <div style={{ display: 'inline-block' }}>Sport</div>
             <div className="sphere gray">11</div>
-            <div style={{ display: 'inline-block' }}>Relaxation</div>
+            <div style={{ display: 'inline-block' }}>Relaxation</div> */}
         </Styles>
         <p>--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</p>
       </div>

@@ -9,10 +9,11 @@ import Achievements_3 from './Components/Achievements_3';
 import CompletedChallenges_4 from './Components/CompletedChallenges_4';
 
 function App() {
+  
   return (
     <div className="App">
       <Header />
-      
+
       <ChooseFreshIdeas_1 />
       <IdeasInMyList_SLIDE_2 />
       <Achievements_3 />
