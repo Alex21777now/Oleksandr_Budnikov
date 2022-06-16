@@ -25,7 +25,12 @@ import {
                Data11();
                const data1 = Array(Data11());
                console.log(data1);                    */
-
+               function RandArray(array){
+                   var rand = Math.random()*array.length | 0;
+                   var rValue = array[rand];
+                   return rValue;
+               }
+               var myArray = ['secondary', 'success', 'warning', 'info', 'light', 'dark'];
 
 const KursVse = props => (
 
@@ -33,21 +38,33 @@ const KursVse = props => (
 
   <p>{ props.error }</p>
   { props.cc1 &&
-    <div> КУРСЫ <strong>ВСЕХ ВАЛЮТ</strong>, УСТАНОВЛЕННЫЕ НА <strong>ДАННЫЙ МОМЕНТ</strong>:
+    <div>
         <p>{<div><p>&nbsp;&nbsp;&nbsp;</p></div>}</p>
         <p>{
-          /*   data1.map(dat1 => (<h1>{dat1}</h1>)) */
+
 
              props.data1.map(dat1 => (
-                <div>
 
-                <p>Код валюты: {dat1.r030}</p>
-                <p>Название валюты: {dat1.txt}</p>
+               <Card
+                 bg={RandArray(myArray)}
+                 key={dat1.r030}
+                 text={'black'}
+                 //text={Card.background === 'light' ? 'black' : 'black'}
+                 style={{ width: '18rem', display: 'inline-block', margin: '15px'}}
+                 className="mb-3"
+               >
+               <Card.Header>Header</Card.Header>
+                 <Card.Body>
+                {/*<p>Код валюты: {dat1.r030}</p>*/}
+                <Card.Title>{dat1.txt} Название валюты: Card Title </Card.Title>
+                    <Card.Text>
                 <p>Курс: <strong>{dat1.rate}</strong></p>
                 <p>Сокращенное имя валюты: <strong>{dat1.cc}</strong></p>
                 <p>Дата: {dat1.exchangedate}</p>
-                <p>______________________________________________</p>
-                </div>
+                <p>    </p>
+                    </Card.Text>
+                  </Card.Body>
+                </Card>
               ))
         }</p>
 

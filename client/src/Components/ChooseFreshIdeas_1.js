@@ -45,13 +45,18 @@ export default class ChooseFreshIdeas_1 extends Component {
     return (
       <>
       <h4>Choose fresh ideas to do</h4>
-      <p>&nbsp;</p>
+{/*      <p>&nbsp;</p>  */}
       <div>
+
+{/*  НАША БыВШАЯ ФОРМА
       <Form kursMethod1={this.gettingKurs1}
 
             data1={this.state.data1}
        />
+*/}
+
       <>
+{/*  НАША БыВШАЯ С Т А Т И К А
 {[
 
   'Secondary',
@@ -80,6 +85,8 @@ export default class ChooseFreshIdeas_1 extends Component {
   </Card>
 ))}
 
+*/}
+
 {
   <KursVse
    cc1={this.state.cc1}
@@ -93,6 +100,7 @@ export default class ChooseFreshIdeas_1 extends Component {
    />
  }
      </>
+    <img src="logo192.png" alt="" onLoad={this.gettingKurs1}></img>
        <p>&nbsp;</p>
      <p>--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</p>
       </div>
