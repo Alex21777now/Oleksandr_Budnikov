@@ -21,7 +21,9 @@ export default class ChooseFreshIdeas_1 extends Component {
 
   }
 
-  gettingKurs1 = async (e1) => {
+
+
+/*gettingKurs1 = async (e1) => {
     e1.preventDefault();
     const api_url1 = await fetch(`https://bank.gov.ua/NBUStatService/v1/statdirectory/exchange?json`);
     const data1 = await api_url1.json();
@@ -36,10 +38,31 @@ export default class ChooseFreshIdeas_1 extends Component {
       data1: data1,
       error: ""
     });
-    /*const items1 = data1.map((dat1) => <li>{dat1}</li>);*/
-    /*console.log(items1);*/
 
-  }
+  }*/
+
+/* componentDidMount() {
+
+      console.log('KAKOGO FIGA NE RABOTAET METOD TUT')
+} */
+
+async componentDidMount() {
+// when react first renders then it called componentDidMount()
+
+const api_url1 = await fetch(`https://bank.gov.ua/NBUStatService/v1/statdirectory/exchange?json`);
+const data1 = await api_url1.json();
+console.log(data1);
+
+this.setState({
+  cc1: data1[4].cc,
+  exchangedate1: data1[4].exchangedate,
+  r0301: data1[4].r030,
+  rate1: data1[4].rate,
+  txt1: data1[4].txt,
+  data1: data1,
+  error: ""
+});
+}
 
   render() {
     return (
@@ -100,7 +123,7 @@ export default class ChooseFreshIdeas_1 extends Component {
    />
  }
      </>
-    <img src="logo192.png" alt="" onLoad={this.gettingKurs1}></img>
+     {/*БЫВШЕЕ ВЫПОЛНЕНИЕ МЕТОДА ЗАГРУЗКОЙ КАРТИНКИ <img src="logo192.png" alt="" onLoad={this.gettingKurs1}></img>*/}
        <p>&nbsp;</p>
      <p>--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</p>
       </div>
