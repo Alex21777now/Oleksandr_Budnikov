@@ -45,26 +45,50 @@ const KursVse = props => (
 
              props.data1.map(dat1 => (
 
-               <Card
-                 bg={RandArray(myArray)}
-                 key={dat1.r030}
-                 text={'black'}
-                 //text={Card.background === 'light' ? 'black' : 'black'}
-                 style={{ width: '18rem', display: 'inline-block', margin: '15px'}}
-                 className="mb-3"
-               >
-               <Card.Header>Header</Card.Header>
-                 <Card.Body>
-                {/*<p>Код валюты: {dat1.r030}</p>*/}
-                <Card.Title>{dat1.txt} Название валюты: Card Title </Card.Title>
-                    <Card.Text>
-                <p>Курс: <strong>{dat1.rate}</strong></p>
-                <p>Сокращенное имя валюты: <strong>{dat1.cc}</strong></p>
-                <p>Дата: {dat1.exchangedate}</p>
-                <p>    </p>
-                    </Card.Text>
-                  </Card.Body>
-                </Card>
+                 <Card
+                    bg={RandArray(myArray)}
+                    key={dat1.r030}
+                    text={'black'}
+                    //text={Card.background === 'light' ? 'black' : 'black'}
+                    style={{ width: '18rem', display: 'inline-block', margin: '15px'}}
+                    className="mb-3"
+                  >
+                  <Card.Header>Header</Card.Header>
+                    <Card.Body>
+                   {/*<p>Код валюты: {dat1.r030}</p>*/}
+                   <Card.Title>{dat1.txt} Название валюты: Card Title </Card.Title>
+                       <Card.Text>
+                   <p>Курс: <strong>{dat1.rate}</strong></p>
+                   <p>Сокращенное имя валюты: <strong>{dat1.cc}</strong></p>
+                   <p>Дата: {dat1.exchangedate}</p>
+                   <p>    </p>
+                       </Card.Text>
+                     </Card.Body>
+                   </Card>
+
+              /*  <Card
+                   bg={RandArray(myArray)}
+                   key={dat1.key}
+                   text={'black'}
+                   //text={Card.background === 'light' ? 'black' : 'black'}
+                   style={{ width: '18rem', display: 'inline-block', margin: '15px'}}
+                   className="mb-3"
+                 >
+                 <Card.Header>Header</Card.Header>
+                   <Card.Body>
+                  //<p>Код валюты: {dat1.r030}</p>
+                  <Card.Title>{dat1.link} LINK: Card Title </Card.Title>
+                      <Card.Text>
+                  <p>PRICE: <strong>{dat1.price}</strong></p>
+                  <p>ACTIVITY: <strong>{dat1.activity}</strong></p>
+                  <p>TYPE: {dat1.type}</p>
+                  <p>PARTICIPANTS: <strong>{dat1.participants}</strong></p>
+                  <p>ACCESSIBILITY: {dat1.accessibility}</p>
+                  <p>    </p>
+                      </Card.Text>
+                    </Card.Body>
+                  </Card> */
+
               ))
         }</p>
 

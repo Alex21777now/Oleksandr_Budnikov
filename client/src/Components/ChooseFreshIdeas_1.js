@@ -10,7 +10,7 @@ import KursVse from "./KursVse";
 
 export default class ChooseFreshIdeas_1 extends Component {
 
-  state = {
+/*  state = {
     cc1: undefined,
     exchangedate1: undefined,
     r0301: undefined,
@@ -19,9 +19,20 @@ export default class ChooseFreshIdeas_1 extends Component {
     data1: undefined,
     error: undefined
 
-  }
+  } */
 
+  state = {
+      activity1: undefined,
+      type1: undefined,
+      participants1: undefined,
+      price1: undefined,
+      link1: undefined,
+      key1: undefined,
+      accessibility1: undefined,
+      data1: undefined,
+      error: undefined
 
+    }
 
 /*gettingKurs1 = async (e1) => {
     e1.preventDefault();
@@ -49,7 +60,7 @@ export default class ChooseFreshIdeas_1 extends Component {
 async componentDidMount() {
 // when react first renders then it called componentDidMount()
 
-const api_url1 = await fetch(`https://bank.gov.ua/NBUStatService/v1/statdirectory/exchange?json`);
+/*   const api_url1 = await fetch(`https://bank.gov.ua/NBUStatService/v1/statdirectory/exchange?json`);
 const data1 = await api_url1.json();
 console.log(data1);
 
@@ -61,7 +72,52 @@ this.setState({
   txt1: data1[4].txt,
   data1: data1,
   error: ""
+});  */
+
+/* const api_url1 = await fetch(`http://www.boredapi.com/api/activity?json`);
+const data1 = await api_url1.json();
+console.log(data1);
+
+this.setState({
+  activity1: data1[0].activity,
+  type1: data1[0].type,
+  participants1: data1[0].participants,
+  price1: data1[0].price,
+  link1: data1[0].link,
+  key1: data1[0].key,
+  accessibility1: data1[0].accessibility,
+  data1: data1,
+  error: ""
+});   */
+
+
+
+let data1 = [];
+for (let i = 0; i < 6; i++)
+{
+  const api_url1 = await fetch(`http://www.boredapi.com/api/activity?json`);
+  const item = await api_url1.json();
+  //console.log(item);
+  data1.push({item});
+}
+console.log(data1);
+
+
+this.setState({
+ activity1: data1[0].activity,
+ type1: data1[0].type,
+ participants1: data1[0].participants,
+ price1: data1[0].price,
+ link1: data1[0].link,
+ key1: data1[0].key,
+ accessibility1: data1[0].accessibility,
+ data1: data1,
+ error: ""
 });
+
+
+
+
 }
 
   render() {
@@ -119,7 +175,17 @@ this.setState({
    txt1={this.state.txt1}
    error={this.state.error}
       data1={this.state.data1}
-      /*items1={items1}*/
+
+    /*     activity1={this.state.activity1}
+         type1={this.state.type1}
+         participants1={this.state.participants1}
+         price1={this.state.price1}
+         link1={this.state.link1}
+         key1={this.state.key1}
+         accessibility1={this.state.accessibility1}
+         error={this.state.error}
+            data1={this.state.data1} */
+
    />
  }
      </>
