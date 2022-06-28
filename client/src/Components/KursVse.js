@@ -37,7 +37,7 @@ const KursVse = props => (
   <div>
 
   <p>{ props.error }</p>
-  { props.cc1 &&
+  { props.key1 &&
     <div>
         <p>{<div><p>&nbsp;&nbsp;&nbsp;</p></div>}</p>
         <p>{
@@ -45,7 +45,7 @@ const KursVse = props => (
 
              props.data1.map(dat1 => (
 
-                 <Card
+              /*   <Card
                     bg={RandArray(myArray)}
                     key={dat1.r030}
                     text={'black'}
@@ -55,7 +55,7 @@ const KursVse = props => (
                   >
                   <Card.Header>Header</Card.Header>
                     <Card.Body>
-                   {/*<p>Код валюты: {dat1.r030}</p>*/}
+
                    <Card.Title>{dat1.txt} Название валюты: Card Title </Card.Title>
                        <Card.Text>
                    <p>Курс: <strong>{dat1.rate}</strong></p>
@@ -64,11 +64,11 @@ const KursVse = props => (
                    <p>    </p>
                        </Card.Text>
                      </Card.Body>
-                   </Card>
+                   </Card>   */
 
-              /*  <Card
+                <Card
                    bg={RandArray(myArray)}
-                   key={dat1.key}
+                   key={dat1.item.key}
                    text={'black'}
                    //text={Card.background === 'light' ? 'black' : 'black'}
                    style={{ width: '18rem', display: 'inline-block', margin: '15px'}}
@@ -76,18 +76,18 @@ const KursVse = props => (
                  >
                  <Card.Header>Header</Card.Header>
                    <Card.Body>
-                  //<p>Код валюты: {dat1.r030}</p>
-                  <Card.Title>{dat1.link} LINK: Card Title </Card.Title>
+
+                  <Card.Title>LINK: {dat1.item.link} Card Title </Card.Title>
                       <Card.Text>
-                  <p>PRICE: <strong>{dat1.price}</strong></p>
-                  <p>ACTIVITY: <strong>{dat1.activity}</strong></p>
-                  <p>TYPE: {dat1.type}</p>
-                  <p>PARTICIPANTS: <strong>{dat1.participants}</strong></p>
-                  <p>ACCESSIBILITY: {dat1.accessibility}</p>
+                  <p>PRICE: <strong>{dat1.item.price}</strong></p>
+                  <p>ACTIVITY: <strong>{dat1.item.activity}</strong></p>
+                  <p>TYPE: {dat1.item.type}</p>
+                  <p>PARTICIPANTS: <strong>{dat1.item.participants}</strong></p>
+                  <p>ACCESSIBILITY: {dat1.item.accessibility}</p>
                   <p>    </p>
                       </Card.Text>
                     </Card.Body>
-                  </Card> */
+                  </Card>
 
               ))
         }</p>

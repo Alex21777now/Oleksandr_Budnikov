@@ -19,7 +19,7 @@ export default class ChooseFreshIdeas_1 extends Component {
     data1: undefined,
     error: undefined
 
-  } */
+  }  */
 
   state = {
       activity1: undefined,
@@ -72,27 +72,29 @@ this.setState({
   txt1: data1[4].txt,
   data1: data1,
   error: ""
-});  */
+});
+console.log(this.state);   */
+
 
 /* const api_url1 = await fetch(`http://www.boredapi.com/api/activity?json`);
 const data1 = await api_url1.json();
 console.log(data1);
 
 this.setState({
-  activity1: data1[0].activity,
-  type1: data1[0].type,
-  participants1: data1[0].participants,
-  price1: data1[0].price,
-  link1: data1[0].link,
-  key1: data1[0].key,
-  accessibility1: data1[0].accessibility,
+  activity1: data1.activity,
+  type1: data1.type,
+  participants1: data1.participants,
+  price1: data1.price,
+  link1: data1.link,
+  key1: data1.key,
+  accessibility1: data1.accessibility,
   data1: data1,
   error: ""
-});   */
+});
+console.log(this.state); */
 
 
-
-let data1 = [];
+ let data1 = [];
 for (let i = 0; i < 6; i++)
 {
   const api_url1 = await fetch(`http://www.boredapi.com/api/activity?json`);
@@ -104,17 +106,17 @@ console.log(data1);
 
 
 this.setState({
- activity1: data1[0].activity,
- type1: data1[0].type,
- participants1: data1[0].participants,
- price1: data1[0].price,
- link1: data1[0].link,
- key1: data1[0].key,
- accessibility1: data1[0].accessibility,
+ activity1: data1[4].item.activity,
+ type1: data1[4].item.type,
+ participants1: data1[4].item.participants,
+ price1: data1[4].item.price,
+ link1: data1[4].item.link,
+ key1: data1[4].item.key,
+ accessibility1: data1[4].item.accessibility,
  data1: data1,
  error: ""
 });
-
+console.log(this.state);
 
 
 
@@ -168,15 +170,15 @@ this.setState({
 
 {
   <KursVse
-   cc1={this.state.cc1}
+  /* cc1={this.state.cc1}
    exchangedate1={this.state.exchangedate1}
    r0301={this.state.r0301}
    rate1={this.state.rate1}
    txt1={this.state.txt1}
    error={this.state.error}
-      data1={this.state.data1}
+      data1={this.state.data1}   */
 
-    /*     activity1={this.state.activity1}
+         activity1={this.state.activity1}
          type1={this.state.type1}
          participants1={this.state.participants1}
          price1={this.state.price1}
@@ -184,7 +186,7 @@ this.setState({
          key1={this.state.key1}
          accessibility1={this.state.accessibility1}
          error={this.state.error}
-            data1={this.state.data1} */
+            data1={this.state.data1} 
 
    />
  }
