@@ -11,11 +11,20 @@ const Styles = styled.div`
 .green {
   background-color: green;
 }
+.lightgreen {
+  background-color: lightgreen;
+}
 .blue {
   background-color: blue;
 }
+.aqua {
+  background-color: aqua;
+}
 .yellow {
   background-color: yellow;
+}
+.salmon {
+  background-color: salmon;
 }
 .sphere {
   height: 200px;
@@ -51,25 +60,41 @@ export default class Achievements_3 extends Component {
       <div>
 
         <Styles>
-          <div style={{ display: 'inline-block', margin: '5%' }}>
+          <div style={{ display: 'inline-block', margin: '3%' }}>
             <div className="sphere">1</div>
             <div style={{ margin: '10%' }}>&nbsp;&nbsp;&nbsp;&nbsp; Recreational</div>
           </div>
-          <div style={{ display: 'inline-block', margin: '5%' }}>
+          <div style={{ display: 'inline-block', margin: '3%' }}>
             <div className="sphere green">3</div>
             <div style={{ margin: '10%' }}>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Social</div>
           </div>
-          <div style={{ display: 'inline-block', margin: '5%' }}>
+          <div style={{ display: 'inline-block', margin: '3%' }}>
             <div className="sphere yellow">5</div>
             <div style={{ margin: '10%' }}>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Education</div>
           </div>
-          <div style={{ display: 'inline-block', margin: '5%' }}>
+          <div style={{ display: 'inline-block', margin: '3%' }}>
             <div className="sphere blue">3</div>
             <div style={{ margin: '10%' }}>&nbsp;&nbsp;&nbsp;&nbsp; Sport</div>
           </div>
-          <div style={{ display: 'inline-block', margin: '5%' }}>
+          <div style={{ display: 'inline-block', margin: '3%' }}>
             <div className="sphere gray">11</div>
             <div style={{ margin: '10%' }}>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Relaxation</div>
+          </div>
+          <div style={{ display: 'inline-block', margin: '3%' }}>
+            <div className="sphere aqua">7</div>
+            <div style={{ margin: '10%' }}>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Cooking</div>
+          </div>
+          <div style={{ display: 'inline-block', margin: '3%' }}>
+            <div className="sphere lightgreen">6</div>
+            <div style={{ margin: '10%' }}>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Music</div>
+          </div>
+          <div style={{ display: 'inline-block', margin: '3%' }}>
+            <div className="sphere salmon">2</div>
+            <div style={{ margin: '10%' }}>&nbsp;&nbsp;&nbsp;&nbsp; Charity</div>
+          </div>
+          <div style={{ display: 'inline-block', margin: '3%' }}>
+            <div className="sphere">12</div>
+            <div style={{ margin: '10%' }}>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Busywork</div>
           </div>
           {/* <div className="sphere yellow">5</div>
             <div style={{ display: 'inline-block' }}>Education</div>

@@ -12,8 +12,10 @@ const Form = props => (
            <input type="number" name="date" placeholder="Дата напр. 20161215"/>
            <button>Получить курс</button>
     </form>*/}
-    <button onClick={props.kursMethod1}>Вывести текущий курс всех валют</button>
-    
+    {/*<button onClick={props.kursMethod1}>Вывести текущий курс всех валют</button>*/}
+    <button type="button" class="btn btn-primary">Store ---> to DB to BackEND</button>
+    <button type="button" class="btn btn-outline-danger ms-1">PULL --- from DB from BackEND</button>
+
   </div>
 
 );

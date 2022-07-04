@@ -44,7 +44,7 @@ export default class Header extends Component {
                   placeholder="Search"
                   className="mr-sm-2"
                 />&emsp;
-                <Button variant="outline-info">Search</Button>
+                <Button variant="outline-info mt-1">Search</Button>
               </Form>
             </Navbar.Collapse>
           </Container>

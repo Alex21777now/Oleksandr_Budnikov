@@ -129,12 +129,12 @@ console.log(this.state);
 {/*      <p>&nbsp;</p>  */}
       <div>
 
-{/*  НАША БыВШАЯ ФОРМА
+
       <Form kursMethod1={this.gettingKurs1}
 
             data1={this.state.data1}
        />
-*/}
+
 
       <>
 {/*  НАША БыВШАЯ С Т А Т И К А
@@ -186,7 +186,7 @@ console.log(this.state);
          key1={this.state.key1}
          accessibility1={this.state.accessibility1}
          error={this.state.error}
-            data1={this.state.data1} 
+            data1={this.state.data1}
 
    />
  }
