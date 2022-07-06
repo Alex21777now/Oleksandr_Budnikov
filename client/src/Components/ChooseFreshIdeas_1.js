@@ -135,7 +135,6 @@ console.log(this.state);
             data1={this.state.data1}
        />
 
-
       <>
 {/*  НАША БыВШАЯ С Т А Т И К А
 {[
