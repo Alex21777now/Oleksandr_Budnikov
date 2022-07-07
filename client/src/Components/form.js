@@ -3,10 +3,14 @@ import styled from 'styled-components';
 
 
 const Styles = styled.div`
-  padding: 1rem;
+  /*padding: 3rem;*/
 
 
 .btn-circle {
+    top: 183px;
+    right: 30px;
+    position: fixed;
+    z-index: 2000;
     width: 90px;
     height: 90px;
     border-radius: 45px;
@@ -34,7 +38,7 @@ const Form = props => (
     <button type="button" class="btn btn-outline-danger ms-1">PULL --- from DB from BackEND</button>
   {/*<button type="button" class="btn btn-outline-success ms-2">Clear localStorage</button>*/}
 <Styles>
-    <button type="button" class="btn btn-outline-success btn-circle"><i class="fas fa-map">Clear localStorage</i></button>
+    <button type="button" class="btn btn-outline-success btn-circle float-end"><i class="fas fa-map">Clear localStorage</i></button>
 </Styles>
   </div>
 
