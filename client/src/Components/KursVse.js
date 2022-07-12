@@ -4,6 +4,7 @@ import {
   Card
 
 } from "react-bootstrap";
+import IdeasInMyList_SLIDE_2 from './IdeasInMyList_SLIDE_2';
 
 //const data1 = [1, 2, 3, 4, 5];
 /*const data1 = [{r030: 36, txt: 'Австралійський долар', rate: 19.3653, cc: 'AUD', exchangedate: '29.11.21'},
@@ -73,6 +74,8 @@ const KursVse = props => (
                    //text={Card.background === 'light' ? 'black' : 'black'}
                    style={{ width: '18rem', display: 'inline-block', margin: '15px'}}
                    className="mb-3"
+                //   onClick={() => console.log('ZHOPA 1')}
+                    onClick={() => addSlide()}
                  >
                  <Card.Header>Header</Card.Header>
                    <Card.Body>

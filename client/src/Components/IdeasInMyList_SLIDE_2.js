@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { useState } from "react";
 import {
   Card
 
@@ -8,6 +9,7 @@ import Carousel from 'react-bootstrap/Carousel'
 // import Swiper core and required modules
 import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
+
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/bundle';
@@ -15,8 +17,29 @@ import 'swiper/css/bundle';
 //import 'swiper/css/pagination';
 //import 'swiper/css/scrollbar';
 
-export default class IdeasInMyList_SLIDE_2 extends Component {
-  render() {
+ export default function IdeasInMyList_SLIDE_2() {
+
+   const [swiperInst, setSwiperInst] = useState(null);
+     const [slideData, setSlideData] = useState([
+       { id: "1", title: "Initial Slide" }
+     ]);
+
+     const addSlide = () => {
+     setSlideData([
+       { id: new Date().getTime() + "", title: new Date() + "" },
+       ...slideData
+     ]);
+     swiperInst.update();
+   };
+
+   const removeSlide = (targetId) => {
+    let newData = slideData.filter((s) => {
+      return s.id !== targetId;
+    });
+    setSlideData(newData);
+    swiperInst.update();
+  };
+
     return (
       <>
       <h4>Ideas in my list</h4>
@@ -33,7 +56,10 @@ export default class IdeasInMyList_SLIDE_2 extends Component {
             navigation
             pagination={{ clickable: true }}
       //      scrollbar={{ draggable: true }}
-            onSwiper={(swiper) => console.log(swiper)}
+            onSwiper={(swiper) => {
+          console.log(swiper);
+          setSwiperInst(swiper);
+        }}
             onSlideChange={() => console.log('slide change')}
 
           >
@@ -61,6 +87,7 @@ export default class IdeasInMyList_SLIDE_2 extends Component {
                 text={variant.toLowerCase() === 'light' ? 'dark' : 'white'}
                 style={{ width: '18rem', display: 'inline-block', margin: '15px'}}
                 className="mb-3"
+                onClick={() => console.log('ZHOPA 2')}
               >
                 <Card.Header>Header</Card.Header>
                 <Card.Body>
@@ -71,6 +98,7 @@ export default class IdeasInMyList_SLIDE_2 extends Component {
                   </Card.Text>
                 </Card.Body>
               </Card>
+
               </SwiperSlide>
             ))}
 
@@ -79,11 +107,26 @@ export default class IdeasInMyList_SLIDE_2 extends Component {
           <div>Тут ЕЩЕ Что-то 2</div>
           <div>&nbsp;</div>
 
+          {slideData?.map((s, index) => {
+                    return (
+                      <SwiperSlide key={s.id}>
+                        <div className="a-slide">
+                          <div>{s.title}</div>
+                          <button style={{ margin: 8 }} onClick={() => removeSlide(s.id)}>
+                            REMOVE SLIDE
+                          </button>
+                        </div>
+                      </SwiperSlide>
+                    );
+                  })}
+
           </Swiper>
             <p>&nbsp;</p>
+            <div style={{ margin: 16 }}>
+               <button onClick={() => addSlide()}>ADD SLIDE</button>
+            </div>
       <p>--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</p>
       </div>
       </>
     );
   }
-}
