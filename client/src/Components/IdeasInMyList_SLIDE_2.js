@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import KursVse from "./KursVse";
 import { useState } from "react";
 import {
   Card
@@ -46,7 +47,10 @@ import 'swiper/css/bundle';
       <div>
       ( click on it to fulfill )
       <p>&nbsp;</p>
-
+      <KursVse
+         addSlide={addSlide}
+         dataFromParent = {() => addSlide()}
+       />
       <Swiper
             // install Swiper modules
             modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
@@ -129,4 +133,5 @@ import 'swiper/css/bundle';
       </div>
       </>
     );
+    //module.exports = { addSlide }
   }

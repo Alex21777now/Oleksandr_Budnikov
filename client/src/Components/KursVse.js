@@ -1,11 +1,12 @@
 import React, { Component } from "react";
+import { useCallback } from 'react';
 import PropTypes from 'prop-types'
 import {
   Card
 
 } from "react-bootstrap";
 import IdeasInMyList_SLIDE_2 from './IdeasInMyList_SLIDE_2';
-
+//import {addSlide} from './IdeasInMyList_SLIDE_2';
 //const data1 = [1, 2, 3, 4, 5];
 /*const data1 = [{r030: 36, txt: 'Австралійський долар', rate: 19.3653, cc: 'AUD', exchangedate: '29.11.21'},
                {r030: 124, txt: 'Канадський долар', rate: 21.235, cc: 'CAD', exchangedate: '29.11.21'},
@@ -13,7 +14,13 @@ import IdeasInMyList_SLIDE_2 from './IdeasInMyList_SLIDE_2';
                {r030: 191, txt: 'Куна', rate: 4.0646, cc: 'HRK', exchangedate: '29.11.21'},
                {r030: 203, txt: 'Чеська крона', rate: 1.1921, cc: 'CZK', exchangedate: '29.11.21'}];*/
 
-
+const addSlide = require("./IdeasInMyList_SLIDE_2").addSlide;
+const dataFromParent = require("./IdeasInMyList_SLIDE_2").dataFromParent;
+function AddSlide() { return (
+  console.log('НАЖАТО'),
+  () => dataFromParent()
+  //() => addSlide()
+); }
             /*   async function Data11() {
                  //let data1 =  new Array();
                  //let api_url1=0;
@@ -75,7 +82,7 @@ const KursVse = props => (
                    style={{ width: '18rem', display: 'inline-block', margin: '15px'}}
                    className="mb-3"
                 //   onClick={() => console.log('ZHOPA 1')}
-                    onClick={() => addSlide()}
+                    onClick={() => AddSlide()}
                  >
                  <Card.Header>Header</Card.Header>
                    <Card.Body>
