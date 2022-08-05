@@ -31,7 +31,6 @@ export default class ChooseFreshIdeas_1 extends Component {
       accessibility1: undefined,
       data1: undefined,
       error: undefined
-
     }
 
 /*gettingKurs1 = async (e1) => {

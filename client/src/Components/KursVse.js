@@ -6,6 +6,8 @@ import {
 
 } from "react-bootstrap";
 import IdeasInMyList_SLIDE_2 from './IdeasInMyList_SLIDE_2';
+import {testFunction} from './IdeasInMyList_SLIDE_2'
+import {addSlide} from './IdeasInMyList_SLIDE_2'
 //import {addSlide} from './IdeasInMyList_SLIDE_2';
 //const data1 = [1, 2, 3, 4, 5];
 /*const data1 = [{r030: 36, txt: 'Австралійський долар', rate: 19.3653, cc: 'AUD', exchangedate: '29.11.21'},
@@ -14,13 +16,16 @@ import IdeasInMyList_SLIDE_2 from './IdeasInMyList_SLIDE_2';
                {r030: 191, txt: 'Куна', rate: 4.0646, cc: 'HRK', exchangedate: '29.11.21'},
                {r030: 203, txt: 'Чеська крона', rate: 1.1921, cc: 'CZK', exchangedate: '29.11.21'}];*/
 
-const addSlide = require("./IdeasInMyList_SLIDE_2").addSlide;
+
+/*  const addSlide = require("./IdeasInMyList_SLIDE_2").addSlide;
 const dataFromParent = require("./IdeasInMyList_SLIDE_2").dataFromParent;
 function AddSlide() { return (
   console.log('НАЖАТО'),
   () => dataFromParent()
   //() => addSlide()
-); }
+); }        */
+
+
             /*   async function Data11() {
                  //let data1 =  new Array();
                  //let api_url1=0;
@@ -38,12 +43,16 @@ function AddSlide() { return (
                    var rValue = array[rand];
                    return rValue;
                }
-               var myArray = ['secondary', 'success', 'warning', 'info', 'light', 'dark'];
+               var myArray = ['secondary', 'success', 'warning', 'info', 'light', 'primary'];
 
-const KursVse = props => (
 
+ export default function KursVse(props) {
+
+//const handleClick = useCallback(()=>AddSlide(), []);
+
+return (
   <div>
-
+<button onClick={() => addSlide()}>111</button>
   <p>{ props.error }</p>
   { props.key1 &&
     <div>
@@ -82,7 +91,11 @@ const KursVse = props => (
                    style={{ width: '18rem', display: 'inline-block', margin: '15px'}}
                    className="mb-3"
                 //   onClick={() => console.log('ZHOPA 1')}
-                    onClick={() => AddSlide()}
+                //    onClick={() => console.log('НАЖАТА НАЖАТА')}
+
+                    onClick={() => testFunction()}
+
+
                  >
                  <Card.Header>Header</Card.Header>
                    <Card.Body>
@@ -106,7 +119,4 @@ const KursVse = props => (
   }
   </div>
 );
-
-
-
-export default KursVse;
+}
