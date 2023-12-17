@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { useCallback } from 'react';
+import { useState } from "react";
 import PropTypes from 'prop-types'
 import {
   Card
@@ -7,7 +8,7 @@ import {
 } from "react-bootstrap";
 import IdeasInMyList_SLIDE_2 from './IdeasInMyList_SLIDE_2';
 import {testFunction} from './IdeasInMyList_SLIDE_2'
-import {addSlide} from './IdeasInMyList_SLIDE_2'
+//import {addSlide} from './IdeasInMyList_SLIDE_2'
 //import {addSlide} from './IdeasInMyList_SLIDE_2';
 //const data1 = [1, 2, 3, 4, 5];
 /*const data1 = [{r030: 36, txt: 'Австралійський долар', rate: 19.3653, cc: 'AUD', exchangedate: '29.11.21'},
@@ -48,11 +49,12 @@ function AddSlide() { return (
 
  export default function KursVse(props) {
 
+
 //const handleClick = useCallback(()=>AddSlide(), []);
 
 return (
   <div>
-<button onClick={() => addSlide()}>111</button>
+  <button onClick={() => props.addSlide()}>add slide</button>
   <p>{ props.error }</p>
   { props.key1 &&
     <div>
@@ -93,7 +95,7 @@ return (
                 //   onClick={() => console.log('ZHOPA 1')}
                 //    onClick={() => console.log('НАЖАТА НАЖАТА')}
 
-                    onClick={() => testFunction()}
+                    onClick={() => props.addSlide()}
 
 
                  >

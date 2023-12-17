@@ -3,6 +3,7 @@ import {
   Card
 
 } from "react-bootstrap";
+import { useState } from "react";
 import Form from "./form";
 import KursVse from "./KursVse";
 
@@ -122,6 +123,7 @@ console.log(this.state);
 }
 
   render() {
+    const { addSlide, removeSlide, slideData, setSwiperInst } = this.props;
     return (
       <>
       <h4>Choose fresh ideas to do</h4>
@@ -175,6 +177,11 @@ console.log(this.state);
    txt1={this.state.txt1}
    error={this.state.error}
       data1={this.state.data1}   */
+
+         addSlide={addSlide}
+         removeSlide={removeSlide}
+         slideData={slideData}
+         setSwiperInst={setSwiperInst}
 
          activity1={this.state.activity1}
          type1={this.state.type1}

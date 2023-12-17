@@ -33,11 +33,13 @@ const Styles = styled.div`
   }
 `
 
-export default class CompletedChallenges_4 extends Component {
-  render() {
+export default function CompletedChallenges_4(props) {
+/*export default class CompletedChallenges_4 extends Component { */
+  /*render() {*/
     return (
       <>
       <h4>Completed challenges</h4>
+      <button onClick={() => props.addSlide()}>add slide</button>
       <p>&nbsp;</p>
       <div>
 
@@ -78,5 +80,5 @@ export default class CompletedChallenges_4 extends Component {
       </div>
      </>
     );
-  }
+  /*}*/
 }

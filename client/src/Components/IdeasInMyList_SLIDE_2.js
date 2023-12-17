@@ -26,21 +26,13 @@ export function testFunction() {
   }
 
 
-/*  export function addSlide(slideData, swiperInst, setSlideData) {
-
-  setSlideData([
-    { id: new Date().getTime() + "", title: new Date() + "" },
-    ...slideData
-  ]);
-  swiperInst.update();
-};  */
 
 
-export default function IdeasInMyList_SLIDE_2() {
+export default function IdeasInMyList_SLIDE_2({addSlide, removeSlide, slideData, setSwiperInst}) {
 
-
-
-     const [swiperInst, setSwiperInst] = useState(null);
+   
+ 
+  /*   const [swiperInst, setSwiperInst] = useState(null);
      const [slideData, setSlideData] = useState([
        { id: "1", title: "Initial Slide" }
      ]);
@@ -62,9 +54,8 @@ export default function IdeasInMyList_SLIDE_2() {
    });
    setSlideData(newData);
    swiperInst.update();
- };
-
-
+ };  */
+  
 
    return (
      <>
